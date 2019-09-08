@@ -3,10 +3,6 @@ class Timer {
     this.startTime = null;
     this.stopTime = null;
     this.running = false;
-    this.seconds = 0;
-    this.milliseconds = 0;
-    this.s = "00";
-    this.ms = "00";
   }
 
   getTime() {

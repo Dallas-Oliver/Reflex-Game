@@ -20,18 +20,20 @@
       <section class="form">
         <h1 class="intro">Test your reflexes</h1>
         <p>
-          press the start button and see how quickly you can press it again once
-          the background color changes.
+          press the start button and see how quickly you can press stop once the
+          background color changes.
         </p>
         <section id="button-section">
-          <button id="test" class="btn btn-dark btn-lg">Start</button>
+          <button id="start" class="btn btn-dark btn-lg">Start</button>
+          <button id="stop" class="btn btn-dark btn-lg">Stop</button>
           <button id="reset" class="btn btn-dark btn-lg">Reset</button>
         </section>
 
-        <h1 class="timer" id="total-timer">00:00 ms</h1>
+        <h1 class="timer" id="total-timer"></h1>
       </section>
     </div>
 
+    <script src="timer.js" async defer></script>
     <script src="index.js" async defer></script>
   </body>
 </html>

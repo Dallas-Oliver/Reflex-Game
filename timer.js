@@ -42,4 +42,11 @@ class Timer {
       return (this.stopTime - this.startTime) / 1000;
     }
   }
+
+  reset() {
+    if (this.startTime !== null && this.stopTime !== null) {
+      this.startTime = null;
+      this.stopTime == null;
+    }
+  }
 }

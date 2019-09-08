@@ -7,23 +7,32 @@ const timer = new Timer();
 let timerStarted;
 
 function startButtonPressed(e) {
+  totalTimerDisplay.textContent = "Get ready!";
   e.preventDefault();
   let randomTime = Math.floor(Math.random() * 10 * 1000) + 900;
   setTimeout(startTimer, randomTime);
 }
 
 function stopButtonPressed() {
-  timerStarted = false;
-  timer.stop();
-  changeStyles("darkcyan");
-  displayResults(timer.elapsed());
-  return timer.elapsed();
+  if (timerStarted) {
+    timerStarted = false;
+    timer.stop();
+    displayResults(timer.elapsed());
+    return timer.elapsed();
+  }
 }
 
 function startTimer() {
+  totalTimerDisplay.textContent = "NOW!";
   timerStarted = true;
   timer.start();
   changeStyles("red");
+}
+
+function resetTimer() {
+  changeStyles("darkcyan");
+  timer.reset();
+  totalTimerDisplay.textContent = "";
 }
 
 function changeStyles(color) {
